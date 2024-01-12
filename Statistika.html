@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kampung Ngesti Rahayu</title>
+    <!--Script referensi-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Script Chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Gender Tahun 2023'],
+          ['Laki-laki',     1465],
+          ['Perempuan',      1420],
+        ]);
+
+        var options = {
+          title: 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Gender Tahun 2023',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!--Script Chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Umur Tahun 2023'],
+          ['0 Sampai 5 Tahun',     178],
+          ['6 Sampai 13 Tahun',      413],
+          ['13 Sampai 24 Tahun',  590],
+          ['25 Sampai 60 Tahun', 1343],
+          ['60 Tahun Ke Atas',    361]
+        ]);
+
+        var options = {
+          title: 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Umur Tahun 2023'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+    <!--script chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Agama Tahun 2023'],
+          ['Islam',     2283],
+          ['Katholik',      594],
+          ['Kristen',  4],
+          ['Buddha', 4]
+        ]);
+
+        var options = {
+          title: 'Jumlah Penduduk Kampung Ngesti Rahayu Berdasarkan Agama  Tahun 2023',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>Ngesti Rahayu</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Index.html">Beranda</a></li>
+                    <li><a href="Pengumuman.html">Pengumuman</a></li>
+                    <li><a href="Lokasi.html">Lokasi</a></li>
+                    <li><a href="Sejarah.html">Sejarah</a></li>
+                    <li><a href="Statistika.html">Statistika</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!-- untuk cuaca -->
+        <div id="idc2e4b40d8660e" a='{"t":"r","v":"1.2","lang":"id","locs":[451],"ssot":"c","sics":"ds","cbkg":"#388E3C","cfnt":"#FFFFFF","codd":"rgba(50,200,56,1)","cont":"rgba(0,0,0,1)","sfnt":"a"}'>Sumber Data Cuaca: <a href="https://cuacalab.id/cuaca_bandarlampung/besok/">https://cuacalab.id</a></div><script async src="https://static1.cuacalab.id/widgetjs/?id=idc2e4b40d8660e"></script>
+    </div>
+        
+    <!-- untuk statistika-->
+    <div id="Statistika">
+                <div class="tengah">
+                <h2 class="deskripsi"> Statistika</h2>
+            </div>
+            <div id="piechart_3d" style="width: 700px; height: 500px; margin-left : 250px"></div>
+            <div id="donutchart" style="width: 700px; height: 500px; margin-left : 250px"></div>
+            <div id="piechart" style="width: 700px; height: 500px; margin-left : 250px"></div>
+        </div>
+    
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/profile.php?id=100088549562180"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023; Designed by<span class="designer"></span>KKN83itera_ </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
